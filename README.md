@@ -93,3 +93,7 @@ end
 ```
 
 The basics of all 3 classes are built out for you, much like the finished code from the previous lecture on twritter_one_to_many. What's left to do is to add the association methods to this class to establish a many to many relationship between `User` and `Tweet` through likes.
+
+# Important
+
+When you finish the lesson, please take a few minutes to complete the exit ticket linked at the top of [this git repository](https://github.com/DakotaLMartinez/twitter_many_to_many)
