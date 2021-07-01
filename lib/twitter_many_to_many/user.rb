@@ -5,8 +5,8 @@ class User
     @@all 
   end
   attr_reader :username
-  def initialize(username)
-    @username = username
+  def initialize(attributes = {})
+    @username = attributes[:username]
     @@all << self
   end
 

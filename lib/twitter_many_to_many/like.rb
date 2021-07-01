@@ -4,9 +4,9 @@ class Like
     @@all 
   end
 
-  def initialize(tweet, user)
-    @tweet = tweet 
-    @user = user
+  def initialize(attributes = {})
+    @tweet = attributes[:tweet]
+    @user = attributes[:user]
     @@all << self
   end
 end

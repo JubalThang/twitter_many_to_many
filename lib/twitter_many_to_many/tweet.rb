@@ -6,9 +6,9 @@ class Tweet
   end
 
   attr_reader :message, :user
-  def initialize(message, user)
-    @message = message
-    @user = user
+  def initialize(attributes = {})
+    @message = attributes[:message]
+    @user = attributes[:user]
     @@all << self
   end
 

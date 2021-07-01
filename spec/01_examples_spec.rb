@@ -19,6 +19,7 @@ RSpec.describe "Aquarium has many fish through exhibits" do
     describe "#initialize" do 
       it "accepts a hash of attributes as an argument, including a name, and saves the aquarium to @@all" do 
         expect { aquarium }.not_to raise_error
+        expect(aquarium.instance_variable_get("@name")).to eq("Aquarium of the Pacific")
         expect(Aquarium.class_variable_get("@@all")).to include(aquarium)
       end
     end
