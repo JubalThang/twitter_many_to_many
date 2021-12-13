@@ -17,7 +17,14 @@ class User
   def tweets
     Tweet.all.select { |tweet| tweet.user == self}
   end
-
+  
+  def likes # has_many
+    Like.all.select { |tweet| tweet.user == self}
+  end
+  
+  def liked_tweets # has_many trough
+    likes.map {|like| like.tweet}
+  end
 end
 
   

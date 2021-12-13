@@ -20,4 +20,12 @@ class Tweet
     Tweet.all.delete(self) 
   end
 
+  def likes # has many of join
+    Like.all.select {|like| like.tweet == self}
+  end
+
+  def liker # has many through join
+    likes.map {|like| like.user}
+  end
+
 end
